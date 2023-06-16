@@ -8,7 +8,23 @@
     <script src="task.js" type="text/Javascript"></script>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1 id="head" onmouseover="pl()" onmouseout="ql()">Welcome</h1>
     <h2>home</h2>
+    name<br>
+    <input id="name" placeholder="enter name">
+    <br>
+    password<br>
+    <input type="password" id="password" placeholder="enter password">
+    <br>
+    <input name="1" type="radio" id="radio" value="Sleeping">Sleeping
+    <input name="1" type="radio" id="radio2" value="Drawing">Drawing
+    <input name="1" type="radio" id="radio3" value="Reading">Reading
+    <input name="1" type="radio" id="radio4" value="Playing">Playing
+    <br>
+    <select id="select">
+        <option id="sl" value="Sleeping">Sleeping</option>
+        <option id="dr" value="Drawing">Drawing</option>
+    </select><br>
+    <button onclick="ol()">verify</button>
 </body>
 </html>

@@ -1,0 +1,23 @@
+form{
+    width: fit-content;
+    margin-left: 600px;
+    margin-top: 200px;
+    border:solid 5px blueviolet;
+    justify-content: center;
+    padding: 60px;
+}
+body{
+    background-color: black;
+    color: white;
+}
+input{
+    border: solid 3px blueviolet;
+    border-radius: 5px;
+}
+button{
+    border: solid 2px blueviolet;
+    color: white;
+    font-weight: 400;
+    background-color: green;
+    border-radius: 10px;
+}
