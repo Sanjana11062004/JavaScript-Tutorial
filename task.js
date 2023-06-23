@@ -90,3 +90,17 @@ function ql(){
     var j=document.getElementById("head");
     j.style.color="yellow";
 }
+
+function verify(){
+    var x = document.getElementById("name").value;
+    var y=document.getElementById("password").value;
+    if(x=="sanjana"&& y=="sanjana@123"){
+        alert("successfull");
+        return true;
+    }
+    else{
+        alert("Error");
+        return false;
+    }
+
+}

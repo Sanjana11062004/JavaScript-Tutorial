@@ -8,7 +8,9 @@
     <script src="task.js" type="text/Javascript"></script>
 </head>
 <body>
-    <form>
+    <form onsubmit="return verify()" action="Index.html" >
+        <img src="/login.png">
+        <br><br><br>
         <label>Enter your name</label>
         <br><br>
         <input id="name" placeholder="Name">
@@ -18,7 +20,7 @@
         <input id="password" type="password" placeholder="Password">
         <br>
         <br><br>
-        <button style="margin-left: 60px;" onclick="verify()" id="Login">Login</button>
+        <button type="submit" style="margin-left: 60px;" id="Login">Login</button>
     </form>
 </body>
 </html>
