@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Bar Width</title>
+  <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <div class="progress">
+        <div class="progress-inner"></div>
+    </div>
+      
+      <input class="myCheckBox" type="checkbox" onclick="checkMe()" />
+      <input class="myCheckBox" type="checkbox" onclick="checkMe()" />
+      <input class="myCheckBox" type="checkbox" onclick="checkMe()" />
+      <input class="myCheckBox" type="checkbox" onclick="checkMe()" />
+  <script type="text/Javascript">
+    function checkMe() {
+    const checkBoxes = document.querySelectorAll(".myCheckBox");
+    const progress = document.querySelector(".progress-inner");
+    const checklistProgressInterval = 100 / checkBoxes.length;
+    let width = 0;
+    
+    for(let i = 0; i < checkBoxes.length; i++){
+      if(checkBoxes[i].checked){
+        width += checklistProgressInterval;
+      }
+    }
+    
+      progress.style.width = `${width}%`;
+  }
+  </script>
+</body>
+</html>
