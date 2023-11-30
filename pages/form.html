@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/task.js" type="text/Javascript"></script>
+</head>
+<body>
+    <style>
+        form{
+    width: fit-content;
+    margin-left: 600px;
+    margin-top: 150px;
+    border:solid 5px blueviolet;
+    justify-content: center;
+    padding: 60px;
+}
+body{
+    background-color: black;
+    color: white;
+}
+input{
+    border: solid 3px blueviolet;
+    border-radius: 5px;
+}
+button{
+    border: solid 2px blueviolet;
+    color: white;
+    font-weight: 400;
+    background-color: green;
+    border-radius: 10px;
+}
+img{
+    width: 100px;
+    height: auto;
+    margin-left: 30px;
+}
+
+.progress{
+    width: 150px;
+    height: 20px;
+    background-color: #333;
+    border: 1px solid black;
+    }
+  
+.progress-inner{
+    background-color: #f7f;
+    width: 0%;
+    height:100%;
+  }
+    </style>
+    <form onsubmit="return verify()" action="/pages/index.html" >
+        <img src="/images/login.png">
+        <br><br><br>
+        <label>Enter your name</label>
+        <br><br>
+        <input id="name" placeholder="Name" required>
+        <br><br>
+        <label>Enter password</label>
+        <br><br>
+        <input id="password" type="password" placeholder="Password" required>
+        <br>
+        <br><br>
+        <button type="submit" style="margin-left: 60px;" id="Login">Login</button>
+    </form>
+    <script> 
+        function validateUsername() { 
+            var username = document.getElementById("name").value; 
+ 
+            // Check for minimum length 
+            if (username.length < 5) { 
+                alert("Username must be at least 5 characters long");               
+                  return false; // Prevent form submission 
+            } 
+ 
+            // Check for maximum length             
+            if (username.length > 20) { 
+                alert("Username cannot exceed 20 characters");                 
+                return false; // Prevent form submission 
+            } 
+ 
+            // Check for allowed characters (letters, numbers, underscores)            
+             var pattern = /^[A-Za-z0-9_]+$/;             
+             if (!pattern.test(username)) { 
+                alert("Username can only contain letters, numbers, and underscores");                 
+                return false; // Prevent form submission 
+            }else  
+            { 
+                alert("registered successfully"); 
+            } 
+ 
+            return true; // Allow form submission 
+        } 
+    </script> 
+
+</body>
+</html>

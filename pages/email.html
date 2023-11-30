@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Form Validation Example</title> 
+    <style>         body { 
+            background-color: lightblue; 
+            margin-top: 200px;
+        } 
+    .container{         width: 50%;         margin: 0 auto;         padding: 20px; 
+        background-color: rgb(228, 231, 232);         border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(0,0,0,0.3) 
+ 
+    } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+ 
+<form id="myForm"> 
+    <label for="name">Donor Name:</label> 
+    <input type="text" id="name" name="name" required><br><br> 
+ 
+    <label for="rollNo">Mobile Number:</label> 
+    <input type="text" id="rollNo" name="rollNo" required><br><br> 
+ 
+    <label for="yearOfStudy">Age</label> 
+    <input type="text" id="yearOfStudy" name="yearOfStudy" required><br><br> 
+ 
+    <label for="email">Email:</label> 
+    <input type="email" id="email" name="email" required><br><br> 
+ 
+    <input type="submit" value="Submit"> 
+</form></div> 
+ 
+<script> 
+    // JavaScript function to handle form submission     
+    function handleSubmit(event) { 
+        event.preventDefault(); // Prevent the default form submission 
+ 
+        // Get the email input value 
+        var emailInput = document.getElementById("email").value; 
+ 
+        // Regular expression for email validation 
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
+ 
+        // Check if the email matches the pattern         
+        
+        
+        if (emailPattern.test(emailInput)) { 
+            // Display an alert for successful submission             
+            alert("Submitted successfully!"); 
+        } else { 
+            // Display an alert for incorrect email format 
+            alert("Invalid email format. Please enter a valid email address."); 
+        } 
+    } 
+ 
+    // Add an event listener to the form's submit button 
+    document.getElementById("myForm").addEventListener("submit", handleSubmit); </script> 
+ 
+</body> 
+</html> 

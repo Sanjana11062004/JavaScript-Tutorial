@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="task.js" type="text/Javascript"></script>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <style>
+        form{
+    width: fit-content;
+    margin-left: 600px;
+    margin-top: 150px;
+    border:solid 5px blueviolet;
+    justify-content: center;
+    padding: 60px;
+}
+body{
+    background-color: black;
+    color: white;
+}
+input{
+    border: solid 3px blueviolet;
+    border-radius: 5px;
+}
+button{
+    border: solid 2px blueviolet;
+    color: white;
+    font-weight: 400;
+    background-color: green;
+    border-radius: 10px;
+}
+img{
+    width: 100px;
+    height: auto;
+    margin-left: 30px;
+}
+
+.progress{
+    width: 150px;
+    height: 20px;
+    background-color: #333;
+    border: 1px solid black;
+    }
+  
+.progress-inner{
+    background-color: #f7f;
+    width: 0%;
+    height:100%;
+  }
+    </style><center>
+    <h1 style="font-size: 90px; color: darkslateblue;"   id="head" onmouseover="pl()" onmouseout="ql()">WELCOME</h1>
+    <h2>REGISTRATION</h2>
+    Name<br>
+    <input id="name" placeholder="Enter name">
+    <br><br>
+    Password<br>
+    <input type="password" id="password" placeholder="Enter password">
+    <br><br>
+    Enter password again<br>
+    <input type="password" id="confirmPassword" placeholder="Confirm password">
+    <br><br>
+    <p>Select your hobby:-</p>
+    <input name="1" type="radio" id="radio" value="Sleeping">Sleeping
+    <br><input name="1" type="radio" id="radio2" value="Drawing">Drawing
+    <br><input name="1" type="radio" id="radio3" value="Reading">Reading
+    <br><input name="1" type="radio" id="radio4" value="Playing">Playing
+    <br>
+    <p>Are you a student?</p>
+    <select id="select">
+        <option id="sl" value="Sleeping">Yes</option>
+        <option id="dr" value="Drawing">No</option>
+    </select><br>
+    <p>Anything to mention specific?</p>
+    <input type="text" id="studentAnswer" name="studentAnswer" placeholder="Say something..."><br><br>
+    <button style="width: 200px; background-color: green; color: white;"  onclick="return validateTextField()">Register</button>
+</center>
+<script> 
+            function validateTextField() { 
+            var textField = document.getElementById("studentAnswer").value; 
+ 
+            // Check for non-empty input             
+            if (textField.trim() === "") {                 
+                alert("Please provide an answer");                 
+                return false; // Prevent form submission 
+            } 
+ 
+            // Check for numbers in the input             
+            if (/\d/.test(textField)) {                 
+                alert("Numbers are not allowed in the answer");                 
+                return false; // Prevent form submission 
+            }             
+            else 
+            { 
+                alert("submitted successfully"); 
+            } 
+ 
+            return true; // Allow form submission 
+        } 
+/*
+    function validateUsername() { 
+        var username = document.getElementById("name").value; 
+
+        // Check for minimum length 
+        if (username.length < 5) { 
+            alert("Username must be at least 5 characters long");               
+              return false; // Prevent form submission 
+        } 
+
+        // Check for maximum length             
+        if (username.length > 20) { 
+            alert("Username cannot exceed 20 characters");                 
+            return false; // Prevent form submission 
+        } 
+
+        // Check for allowed characters (letters, numbers, underscores)            
+         var pattern = /^[A-Za-z0-9_]+$/;             
+         if (!pattern.test(username)) { 
+            alert("Username can only contain letters, numbers, and underscores");                 
+            return false; // Prevent form submission 
+        }else  
+        { 
+            alert("username verified successfully"); 
+        } 
+
+        return true; // Allow form submission 
+    } 
+    function validatePassword() { 
+            var password = document.getElementById("password").value; 
+             
+            var confirmPassword = document.getElementById("confirmPassword").value; 
+ 
+            // Check for minimum length             
+            if (password.length < 8) { 
+                alert("Password must be at least 8 characters long");                 
+                return false; // Prevent form submission 
+            } 
+ 
+            // Check if passwords match             
+            if (password !== confirmPassword) {                 
+                alert("Passwords do not match"); 
+                return false; // Prevent form submission 
+            } 
+            return true; // Allow form submission 
+        } */
+
+</script> 
+</body>
+</html>
